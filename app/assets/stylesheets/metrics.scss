@@ -1,17 +1,24 @@
 .miq-metrics {
+  overflow-x:hidden;
+
+  .blank-slate-pf {
+    padding: 60px 60px;
+  }
   .toolbar-pf .form-group {
-    padding-left: 20px;
+    padding-left: 0px;
+    margin-left: 10px;
   }
   .toolbar-pf .form-group .btn-group {
     margin-left: 0;
   }
+  .toolbar-pf {
+    margin-left: -18px;
+    margin-right: -20px;
+  }
   .list-view-container {
-    height: calc(100vh - 316px);
     overflow-y: auto;
     position: static;
-    &.no-filters {
-      height: calc(100vh - 275px);
-    }
+    min-height: calc(100vh - 389px);
   }
   .time-stamp {
     padding-left: 5px;
@@ -23,18 +30,13 @@
     float: left;
   }
   .blank-slate-pf {
-    height: calc(100vh - 316px);
     margin-bottom: 0;
-    &.loading {
-      height: calc(100vh - 218px);
-    }
-    &.no-filters {
-      height: calc(100vh - 275px);
-    }
+    min-height: calc(100vh - 389px);
   }
   .metrics-graph {
+    height: calc(100vh - 275px);
+
     .line-chart {
-      height: calc(100vh - 275px);
       padding: 20px 20px 10px 0;
     }
   }
@@ -56,7 +58,13 @@
     width: 250px;
   }
   .ad-hoc-tenant {
-    margin-left: 5px;
+    vertical-align: top;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+  .ad-hoc-refresh {
+    vertical-align: top;
+    margin-left: 10px;
     margin-bottom: 10px;
   }
   .ad-hoc-tenant-button{
