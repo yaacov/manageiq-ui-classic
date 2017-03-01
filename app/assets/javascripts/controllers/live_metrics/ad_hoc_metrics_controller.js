@@ -123,4 +123,7 @@
 
     metricsConfigFactory(dash);
     initialization();
+
+    // enable the bootstrapSwitch to run chart refresh
+    $("[name=rate-switch]").bootstrapSwitch({ onSwitchChange: httpUtils.refreshGraph });
   }]);

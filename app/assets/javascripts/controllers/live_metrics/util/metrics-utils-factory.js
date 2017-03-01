@@ -1,5 +1,15 @@
 angular.module('miq.util').factory('metricsUtilsFactory', function() {
   return function (dash) {
+    function dataDiff(data) {
+      data.forEach(function(v, i) {
+        if (data[i] && data[i + 1]) {
+          data[i] = data[i + 1] - data[i];
+        } else {
+          data[i] = null;
+        }
+      });
+    }
+
     var getMetricTagsData = function(response) {
       var data = response.data;
 
@@ -32,6 +42,12 @@ angular.module('miq.util').factory('metricsUtilsFactory', function() {
       var data  = response.data.data;
       var xData = data.map(function(d) { return d.start; });
       var yData = data.map(function(d) { return d.avg || null; });
+
+      // if diff checkbox is on, do diff
+      var switchObj = $("#rate-switch");
+      if (switchObj.bootstrapSwitch('state')) {
+        dataDiff(yData);
+      }
 
       xData.unshift('time');
       yData.unshift(metricId);

@@ -28,3 +28,9 @@
 
     %button.btn.btn-primary.pull-left{"type" => "button", "ng-click" => "dash.refreshGraph()"}
       = _("Refresh")
+  .pull-left.ad-hoc-refresh
+    %label
+      %input.bootstrap-switch.ad-hoc-refresh{"type" => "checkbox",
+                                             "name" => "rate-switch",
+                                             "id"   => "rate-switch"}
+      = _("Rate")
