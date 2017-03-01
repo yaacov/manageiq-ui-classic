@@ -1,8 +1,8 @@
 .col-md-12.ad-hoc-tenant
-  .form-group.pull-left
-    %button.btn.btn-primary.ad-hoc-tenant{"type"        => "button",
-                                          "ng-disabled" => "!dash.tenantChanged",
-                                          "ng-click"    => "dash.refreshTenant()"}
+  .form-group.pull-left.ad-hoc-tenant
+    %button.btn.btn-primary{"type"        => "button",
+                            "ng-disabled" => "!dash.tenantChanged",
+                            "ng-click"    => "dash.refreshTenant()"}
       = _("Set tenant")
 
     %input.form-control{"id"                  => "ad-hoc-tenant",
@@ -15,7 +15,7 @@
                         "typeahead-on-select" => "dash.refreshTenant()",
                         "typeahead-wait-ms"   => 500}
 
-%div{"pf-toolbar" => "", "id" => "exampleToolbar", "config" => "dash.toolbarConfig"}
+.ad-hoc-toolbar{"pf-toolbar" => "", "config" => "dash.toolbarConfig"}
   %actions
     %button.btn.btn-default{"type"        => "button",
                             "ng-click"    => "dash.doAddFilter()",

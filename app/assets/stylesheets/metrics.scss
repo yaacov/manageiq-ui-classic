@@ -1,80 +1,50 @@
 .miq-metrics {
   overflow-x:hidden;
 
-  .blank-slate-pf {
-    padding: 60px 60px;
+  .ad-hoc-toolbar {
+      margin-left: 10px;
   }
-  .toolbar-pf .form-group {
-    padding-left: 0px;
-    margin-left: 10px;
-  }
-  .toolbar-pf .form-group .btn-group {
-    margin-left: 0;
-  }
-  .toolbar-pf {
-    margin-left: -18px;
-    margin-right: -20px;
-  }
-  .list-view-container {
-    overflow-y: auto;
-    position: static;
-    min-height: calc(100vh - 389px);
-  }
-  .time-stamp {
-    padding-left: 5px;
-  }
-  .last-value {
-    padding-left: 5px;
-    width: 50px;
-    text-align: right;
-    float: left;
-  }
-  .blank-slate-pf {
-    margin-bottom: 0;
-    min-height: calc(100vh - 389px);
-  }
-  .metrics-graph {
-    height: calc(100vh - 275px);
 
-    .line-chart {
-      padding: 20px 20px 10px 0;
+  .ad-hoc-tenant {
+    margin-left: 5px;
+
+    input  {
+      display: inline;
+      width: 190px;
+    }
+
+    button {
+      vertical-align: top;
+      margin-bottom: 10px;
     }
   }
-  .metric-row {
-    padding-left: 5px;
-    width: 350px;
-    text-align: right;
+
+  .list-view-container, .line-chart, .blank-slate-pf {
+    margin-bottom: 0;
+    min-height: calc(100vh - 362px);
+    margin-left: 20px;
+    margin-right: 20px;
   }
-  .metric-no-padding {
-    padding-right: 5px;
+
+  .list-view-container {
+    padding-top: 10px;
   }
-  .time-range-form {
-    margin: 10px;
-    .btn-group {
-      padding-left: 10px;
-    }
+
+  .line-chart {
+    margin-top: 36px;
+    margin-left: 30px;
+    margin-right: 50px;
   }
+
   .timeline-date-input {
     width: 250px;
   }
-  .ad-hoc-tenant {
-    vertical-align: top;
-    margin-left: 0px;
-    margin-bottom: 10px;
+
+  .list-group {
+    border-top: none;
   }
-  .ad-hoc-refresh {
-    vertical-align: top;
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-  .ad-hoc-tenant-button{
-    vertical-align: top;
-  }
-  #ad-hoc-tenant {
-    display: inline;
-    width: 200px;
-  }
-  h3 {
-    margin-top: 5px;
+
+  .bootstrap-touchspin {
+    text-align: center;
   }
 }
