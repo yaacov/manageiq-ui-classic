@@ -21,7 +21,6 @@
       dash.filterChanged = true;
       dash.itemSelected = false;
       dash.tagsLoaded = false;
-      dash.unAppliedFilters = false;
       dash.applied = false;
       dash.showGraph = false;
 
@@ -75,6 +74,7 @@
       // when change filter we automatically apply changes
       if (!addOnly) {
         dash.items = [];
+        dash.filterChanged = false;
         dash.filterConfig.resultsCount = 0;
         dash.applyFilters();
       }
@@ -91,7 +91,6 @@
         value: dash.filterConfig.currentValue}
       );
       dash.filterConfig.currentValue = "";
-      dash.unAppliedFilters = true;
 
       // add a filter but only add (do not apply)
       filterChange(null, true);
@@ -100,7 +99,6 @@
     dash.applyFilters = function() {
       dash.applied = true;
       dash.filterChanged = false;
-      dash.unAppliedFilters = false;
       httpUtils.refreshList();
     };
 
